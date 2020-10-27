@@ -24,13 +24,13 @@ Predict four real numbers from a large input vector of real numbers.
 
 To get the complex-valued time-series M(t) into a neural network, we can simply "stack" the real and complex parts together to make a real-valued input vector.
 
-![simple_neural_net_drawing.png](simple_neural_net_drawing.png)
+![simple_neural_net_drawing.png](imgs/simple_neural_net_drawing.png)
 
 ### Example Solution's Figures of Merit:
 
 Using the simple neural network with 15 epochs (the code below only uses 3, for speed), we obtain the following predictions of the four output variables from the M(t) curves:
 
-![simple_solution_15epochs.png](simple_solution_15epochs.png)
+![simple_solution_15epochs.png](imgs/simple_solution_15epochs.png)
 
 Note that one of these (correlation strength) is predicted very well, two are partially captured (the correlation and dissipation power), and one is not captured at all (correlation length).
 
@@ -41,7 +41,7 @@ Note that one of these (correlation strength) is predicted very well, two are pa
 Although the NMR "spin echo" technique may sound complicated, the following animation created by Gavin W Morley (by way of https://en.wikipedia.org/wiki/Spin_echo) makes it much clearer!
 
 
-![NMR Spin Echo Animation](HahnEcho_GWM.gif)
+![NMR Spin Echo Animation](imgs/HahnEcho_GWM.gif)
 
 
 The red arrows in this animation represents the values of nuclear spins in the material.
@@ -61,11 +61,11 @@ This is an important technique because the average spin magnetization is hard to
 
 Here is a typical curve for the time-dependent magnetization M(t) for a spin-echo in most materials:
 
-![standard_spinecho.png](standard_spinecho.png)
+![standard_spinecho.png](imgs/standard_spinecho.png)
 
 Sometimes, a more complicated curve can occur, such as:
 
-![coupled_echo.png](coupled_echo.png)
+![coupled_echo.png](imgs/coupled_echo.png)
 
 This more complicated structure has been caused by spin-spin interactions between the precessing nuclear spins. Normally, each spin precesses in a uniform way irrespective of the rest of the nuclei in the material. In this coupled case, however, the nuclear magnetization that occurs near the "echo" influences the spins' motions, modifying the shape of the observed echo.
 
@@ -84,7 +84,7 @@ Luckily, electrons can interact with the nuclar spins of a material (by way of t
 If the electron-nuclear coupling becomes strong enough (enhanced perhaps by a "qunatum" electronic phase), then a non-neglible two-step process can couple the nuclei with each other throughout the material.
 That two-step process is when a nuclear spin couples to an electron and changes its motion, and then that electron later "scatters" off another nuclear spin elsewhere in the material.
 
-![latex_model_details.png](latex_model_details.png)
+![latex_model_details.png](imgs/latex_model_details.png)
 
 Our goal is to develop a model that accurately determines the above four variables from a single M(t) curve.
 
